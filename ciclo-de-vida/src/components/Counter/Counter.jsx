@@ -15,32 +15,32 @@ export class Counter extends React.Component {
   componentDidMount() {
     console.log("O componente foi montado!!");
 
-    document.addEventListener("scroll", this.consoleScroll)
+    document.addEventListener("scroll", this.consoleScroll);
   }
 
   //metodo chamado sempre que uma prop ou estado for atualizado
   shouldComponentUpdate() {
     return true;
-
   }
+
+  
 
   UNSAFE_componentWillMount() {
     console.log("O componente será atualizado");
   }
 
   componentDidUpdate() {
-    console.log('O componente Counter foi atualizado')
+    console.log("O componente Counter foi atualizado");
   }
 
   componentWillUnmount() {
-    console.log('O componente sera desmontado...')
+    console.log("O componente sera desmontado...");
 
-    document.removeEventListener('scroll', this.consoleScroll)
-    
+    document.removeEventListener("scroll", this.consoleScroll);
   }
 
   consoleScroll() {
-    console.log('Rolando a pagina...')
+    console.log("Rolando a pagina...");
   }
 
   render() {
